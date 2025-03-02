@@ -19,12 +19,21 @@ public class QuestionManager : MonoBehaviour
 
     void generateQuestions ()
     {
+        generateAddSub();
+        
+        _messageBoxTextField.text = question;
+
+        clearInputField();
+    }
+
+    private void generateAddSub()
+    {
         /*
         Find random values for the operation
         */
-        int operand1 = UnityEngine.Random.Range(1,100); 
-        int operand2 = UnityEngine.Random.Range(1,100);
-        
+        int operand1 = UnityEngine.Random.Range(1, 100);
+        int operand2 = UnityEngine.Random.Range(1, 100);
+
         // Addition or Subtraction
         if (UnityEngine.Random.value < 0.5f)
         {
@@ -36,10 +45,6 @@ public class QuestionManager : MonoBehaviour
             question = $"{operand1} - {operand2} = ";
             answer = operand1 - operand2;
         }
-
-        _messageBoxTextField.text = question;
-
-        clearInputField();
     }
 
     public void validateAnswer()
