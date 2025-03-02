@@ -1933,6 +1933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bee7aa846ef5441791ad6e3f8d87e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _messageTextField: {fileID: 978072740}
 --- !u!4 &538113289
 Transform:
   m_ObjectHideFlags: 0
