@@ -6,6 +6,7 @@ public class MonsterManager : MonoBehaviour
     [SerializeField] int amountOfMonsters = 10;
     [SerializeField] Transform monsterSpwanPoints;
     [SerializeField] GameObject[] monsterPrefabs;
+    [SerializeField] float waveDifficulty;
 
     public List<GameObject> monsters;
 
@@ -20,6 +21,22 @@ public class MonsterManager : MonoBehaviour
 
             monsters.Add(monster);
         }
+
+        waveDifficulty = calculateWaveDifficulty();
+    }
+
+    float calculateWaveDifficulty()
+    {
+        float difficulty = 0;
+
+        foreach (GameObject monster in monsters)
+        {
+            difficulty += monster.GetComponent<Points>().points;
+        }
+
+        difficulty /= (amountOfMonsters * 3);
+
+        return difficulty;
     }
 
     // Update is called once per frame
