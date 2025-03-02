@@ -3692,7 +3692,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff73375592b9648d29e671ac5ee09841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  operand1: 45
+  _messageBoxTextField: {fileID: 978072740}
+  _answerInputField: {fileID: 803896320}
+  answer: 0
 --- !u!4 &1142792478
 Transform:
   m_ObjectHideFlags: 0
