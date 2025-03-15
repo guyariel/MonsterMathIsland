@@ -8,7 +8,6 @@ public class QuestionManager : MonoBehaviour
     [SerializeField] TMP_Text _messageBoxTextField;
     [SerializeField] TMP_InputField _answerInputField;
 
-    string question;
     [SerializeField] int answer;
  
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,20 +18,22 @@ public class QuestionManager : MonoBehaviour
 
     void generateQuestions ()
     {
-        generateAddSub();
-        
-        _messageBoxTextField.text = question;
+        var qa = generateAddSub(1, 100);
+
+        _messageBoxTextField.text = qa.question;
 
         clearInputField();
     }
 
-    private void generateAddSub()
+    (string question, int answer) generateAddSub(int min, int max)
     {
         /*
         Find random values for the operation
         */
-        int operand1 = UnityEngine.Random.Range(1, 100);
-        int operand2 = UnityEngine.Random.Range(1, 100);
+        int operand1 = UnityEngine.Random.Range(min, max);
+        int operand2 = UnityEngine.Random.Range(min, max);
+
+        string question = "";
 
         // Addition or Subtraction
         if (UnityEngine.Random.value < 0.5f)
@@ -45,6 +46,7 @@ public class QuestionManager : MonoBehaviour
             question = $"{operand1} - {operand2} = ";
             answer = operand1 - operand2;
         }
+        return (question, answer);
     }
 
     public void validateAnswer()
