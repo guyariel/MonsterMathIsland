@@ -2760,6 +2760,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MonsterPlusMinusVariant
       objectReference: {fileID: 0}
+    - target: {fileID: 9025218493570264906, guid: 7dfe0033d69f26a40bfc3e8be0168d8e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3265,7 +3269,7 @@ Transform:
   m_GameObject: {fileID: 1019174659}
   serializedVersion: 2
   m_LocalRotation: {x: 0.013190922, y: 0.9782688, z: -0.06696533, w: -0.19578522}
-  m_LocalPosition: {x: 1.6831241, y: 1.9083637, z: -2.8941565}
+  m_LocalPosition: {x: 0.98, y: 1.9083637, z: -4.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
+using TutorialAssets.Scripts;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class MonsterManager : MonoBehaviour
@@ -39,11 +41,32 @@ public class MonsterManager : MonoBehaviour
         if (monsters.Count <= monsterIndex) return;
 
         Transform monster = monsters[monsterIndex].transform;
+        monster.GetComponent<MonsterController>().ChangeState(MonsterState.Attack);
         monster.position = attackPoint.position;
         monster.rotation = attackPoint.rotation;
     }
 
+    public void MoveMonsterToQueue (int monsterIndex)
+    {
+        if (monsters.Count <= monsterIndex) return;
 
+        Transform monster = monsters[monsterIndex].transform;
+        monster.GetComponent<MonsterController>().ChangeState(MonsterState.Queue);
+        monster.position = queuePoint.position;
+        monster.rotation = queuePoint.rotation;
+    }
+
+    public void MoveNextMonsterToQueue ()
+    {
+        MoveMonsterToQueue(1);
+    }
+
+    public void KillMonster (int monsterIndex)
+    {
+        Destroy(monsters[monsterIndex]);
+        monsters.RemoveAt(monsterIndex);
+    }
+ 
     float calculateWaveDifficulty()
     {
         float difficulty = 0;
@@ -61,6 +84,5 @@ public class MonsterManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 }
