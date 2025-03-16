@@ -3101,13 +3101,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973577640}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.013190922, y: 0.9782688, z: -0.06696533, w: -0.19578522}
-  m_LocalPosition: {x: 8.39, y: 1.63, z: 1.58}
+  m_LocalRotation: {x: -0.017064342, y: 0.7974067, z: -0.066084705, w: -0.59957016}
+  m_LocalPosition: {x: 5.24, y: 0.86, z: -2.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -129.132, z: 0}
+  m_LocalEulerAnglesHint: {x: 7.23, y: -105.931, z: 3.006}
 --- !u!1 &978072738
 GameObject:
   m_ObjectHideFlags: 0
@@ -3269,7 +3269,7 @@ Transform:
   m_GameObject: {fileID: 1019174659}
   serializedVersion: 2
   m_LocalRotation: {x: 0.013190922, y: 0.9782688, z: -0.06696533, w: -0.19578522}
-  m_LocalPosition: {x: 0.98, y: 1.9083637, z: -4.75}
+  m_LocalPosition: {x: 1.22, y: 1.52, z: -4.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3583,6 +3583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff73375592b9648d29e671ac5ee09841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _monsterManager: {fileID: 1142792479}
   _messageBoxTextField: {fileID: 978072740}
   _answerInputField: {fileID: 803896320}
   answer: 0

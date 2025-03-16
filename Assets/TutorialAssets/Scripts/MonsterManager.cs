@@ -25,6 +25,8 @@ public class MonsterManager : MonoBehaviour
         }
 
         MonstersAttacks(0);
+        MoveNextMonsterToQueue();
+        
         waveDifficulty = calculateWaveDifficulty();
     }
 
